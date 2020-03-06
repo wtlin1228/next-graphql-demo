@@ -5,11 +5,22 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "commit": "npx git-cz"
   },
   "dependencies": {
+    "apollo-client": "^2.6.8",
+    "apollo-link-http": "^1.5.16",
     "next": "9.2.2",
     "react": "16.13.0",
     "react-dom": "16.13.0"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "3.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
