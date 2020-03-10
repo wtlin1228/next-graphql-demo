@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components'
 import { size } from 'polished'
 
-import Logo from '../assets/logo.svg'
+import Logo from '../svgrs/logo-svg'
 
 const spin = keyframes`
   to {

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { useApolloClient } from '@apollo/react-hooks'
 
 import { menuItemClassName } from '../components/menu-item'
-import { ReactComponent as ExitIcon } from '../assets/icons/exit.svg'
+import ExitIcon from '../svgrs/exit-svg'
 
 const LogoutButton = () => {
   const client = useApolloClient()

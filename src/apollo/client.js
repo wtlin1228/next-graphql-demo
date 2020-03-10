@@ -3,6 +3,8 @@ import Head from 'next/head'
 import { ApolloProvider } from '@apollo/react-hooks'
 import { ApolloClient } from 'apollo-client'
 import { HttpLink } from 'apollo-link-http'
+import { InMemoryCache } from 'apollo-cache-inmemory'
+import fetch from 'node-fetch'
 
 // On the client, we store the Apollo Client in the following variable.
 // This prevents the client from reinitializing between page transitions.
@@ -105,6 +107,8 @@ export function withApollo(PageComponent, { ssr = true } = {}) {
       }
     }
   }
+
+  return WithApollo
 }
 
 /**
@@ -136,7 +140,8 @@ function createApolloClient(ctx = {}, initialState = {}) {
   const cache = new InMemoryCache().restore(initialState)
   const link = new HttpLink({
     uri: 'http://localhost:4000/graphql',
-    credentials: 'same-origin'
+    credentials: 'same-origin',
+    fetch
   })
 
   // Check out https://github.com/zeit/next.js/pull/4611 if you want to use the AWSAppSyncClient

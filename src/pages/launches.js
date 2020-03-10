@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react'
 import { useQuery } from '@apollo/react-hooks'
 import gql from 'graphql-tag'
-
 import { LaunchTile, Header, Button, Loading } from '../components'
 
 export const LAUNCH_TITLE_DATA = gql`

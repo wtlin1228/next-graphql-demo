@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import { Router } from '@reach/router'
+import { withApollo } from '../apollo/client'
 
 // import Launch from './launch'
 import Launches from './launches'
@@ -7,7 +8,7 @@ import Launches from './launches'
 // import Profile from './profile'
 import { Footer, PageContainer } from '../components'
 
-export default function Pages() {
+function Pages() {
   return (
     <Fragment>
       <PageContainer>
@@ -22,3 +23,5 @@ export default function Pages() {
     </Fragment>
   )
 }
+
+export default withApollo(Pages)

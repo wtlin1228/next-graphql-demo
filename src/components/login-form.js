@@ -4,9 +4,9 @@ import { size } from 'polished'
 
 import Button from './button'
 import space from '../assets/images/space.jpg'
-import Logo from '../assets/logo.svg'
-import Curve from '../assets/curve.svg'
-import Rocket from '../assets/rocket.svg'
+import Logo from '../svgrs/logo-svg'
+import Curve from '../svgrs/curve-svg'
+import Rocket from '../svgrs/rocket-svg'
 
 export default class LoginForm extends Component {
   state = { email: '' }

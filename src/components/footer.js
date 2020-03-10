@@ -3,9 +3,9 @@ import styled from 'styled-components'
 
 import MenuItem from './menu-item'
 import LogoutButton from '../containers/logout-button'
-import HomeIcon from '../assets/icons/home.svg'
-import CartIcon from '../assets/icons/cart.svg'
-import ProfileIcon from '../assets/icons/profile.svg'
+import HomeIcon from '../svgrs/home-svg'
+import CartIcon from '../svgrs/cart-svg'
+import ProfileIcon from '../svgrs/profile-svg'
 
 export default function Footer() {
   return (
@@ -45,7 +45,7 @@ const Container = styled.footer`
 const InnerContainer = styled.div`
   display: flex;
   align-items: center;
-  max-width: 460;
-  padding: ${props => props.theme.unit * 2.5};
+  max-width: 460px;
+  padding: ${props => props.theme.unit * 2.5}px;
   margin: 0 auto;
 `
